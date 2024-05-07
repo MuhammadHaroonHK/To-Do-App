@@ -1,0 +1,119 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgb(232, 155, 155), rgb(179, 248, 179), rgb(168, 168, 251), rgb(250, 250, 167));
+}
+
+.container{
+    width: 400px;
+    height: fit-content;
+    margin-top: 80px;
+    background-color: #fff;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px;
+}
+
+.head img{
+    width: 30px;
+}
+
+.input-area{
+    width: 380px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #e8e5e5;
+    margin: 16px;
+    display: flex;
+}
+
+.input-area input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.input-area button{
+    width: 76px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(250, 124, 79);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#list{
+    margin: 16px;
+    
+}
+
+#close{
+    width: 30px;
+    height: 30px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+}
+
+ul li span{
+    position: absolute;
+    right: 0%;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: bold; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+ul li span:hover{
+    background-color: orangered;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-position: center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    content: '';
+    background-image: url(checked.png);
+}
